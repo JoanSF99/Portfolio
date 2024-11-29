@@ -141,8 +141,11 @@ hr {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -60%);
-    width: 90%;
     height: 250px;
+    width: 90%;
+    max-width: 800px;
+    overflow-wrap: break-word;
+    word-break: break-all;
 }
 
     .about-me h1 {
@@ -164,7 +167,7 @@ hr {
         line-height: normal;
         margin: auto;
         padding-left: 2%;
-        max-width: 800px;
+        max-width: 100%;
         font-size: var(--about-me-p-size);
     }
 
