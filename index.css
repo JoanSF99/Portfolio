@@ -379,9 +379,7 @@ hr {
 }
 
 .my-work-entry-r {
-    min-height: 700px;
     display: flex;
-    /* Added: Flex direction reversed */
     flex-direction: row-reverse;
 }
 
