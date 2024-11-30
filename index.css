@@ -1,9 +1,9 @@
 ﻿:root {
-    --main-color: rgba(8, 14, 18, 1);
+    --main-color: rgba(0, 0, 0, 1);
     --accent-color: rgba(8, 30, 38, 1);
-    --highlight-color: rgba(40, 175, 176, 1);
+    --highlight-color: rgb(255, 255, 255);
     --default-text-color: rgba(220, 220, 220, 1);
-    --firefly-color: rgba(40, 175, 176, 0.8);
+    --firefly-color: rgba(255, 255, 255, 0.8);
     --firefly-glow: 40, 175, 176, 0.2;
     --about-me-h1-size: 2.6rem;
     --about-me-h2-size: 2rem;
@@ -130,8 +130,9 @@ hr {
     position: relative;
     height: 500px;
     background-image: url("./images/about-me-background.png");
-    background-repeat: repeat-x;
+    /*background-repeat: repeat-x;*/
     overflow: hidden;
+    position: relative;
 }
 
 .about-me {
@@ -141,11 +142,8 @@ hr {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -60%);
-    height: 250px;
     width: 90%;
-    max-width: 800px;
-    overflow-wrap: break-word;
-    word-break: break-all;
+    height: 250px;
 }
 
     .about-me h1 {
@@ -160,14 +158,14 @@ hr {
         font-size: var(--about-me-h2-size);
         text-align: center;
         line-height: 0px;
-        color: var(--default-text-color)
+        color: var(--default-text-color);
     }
 
     .about-me p {
         line-height: normal;
         margin: auto;
         padding-left: 2%;
-        max-width: 100%;
+        max-width: 1000px;
         font-size: var(--about-me-p-size);
     }
 
@@ -179,6 +177,18 @@ hr {
     bottom: 15%;
     width: 100px;
     height: 100px;
+}
+
+.about-me-line {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: var(--highlight-color); /* Adjust color as needed */
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
 }
 
 @media screen and (max-width: 1920px) {
@@ -242,7 +252,7 @@ hr {
     }
 
     to {
-        transform: translate(0, calc(100vh - 50px));
+        transform: translate(calc(100vh - 50px), 0);
     }
 }
 
@@ -348,6 +358,108 @@ hr {
     margin: 0;
 }
 
+/* ////// My Work (Right Side) ////// */
+.my-work-r {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 60%;
+    /* Added: Align items to the right */
+    justify-content: flex-end;
+}
+
+.my-work-spacer-r {
+    height: 150px;
+}
+
+.my-work-r h1 {
+    color: var(--highlight-color);
+    /* Added: Text align right */
+    text-align: left;
+}
+
+.my-work-entry-r {
+    min-height: 700px;
+    display: flex;
+    /* Added: Flex direction reversed */
+    flex-direction: row-reverse;
+}
+
+.my-work-entry-text-r {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: var(--about-me-p-size);
+    line-height: normal;
+    width: 30%;
+    margin-left: 3%; /* Changed: Margin to the left */
+    /* Added: Text align right */
+    text-align: left;
+}
+
+.my-work-entry-slideshow-r {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 70%;
+    min-height: 700px;
+    height: 100%;
+}
+
+.link-list-r {
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    /* Added: Justify content to the right */
+    justify-content: flex-end;
+}
+
+.image-button-r {
+    background-repeat: no-repeat;
+    background-size: contain; /* Scale the image while maintaining aspect ratio */
+    background-position: center; /* Center the image within the div */
+    width: 10%; /* Ensure the width fills the container */
+    height: 100%; /* Make the background size adjust to the div's height */
+    transition: all 0.2s;
+}
+
+    .image-button:hover-r {
+        transform: scale(1.2); /* Swell the image slightly */
+    }
+
+.itch-r {
+    margin-right: auto; /* Changed: Margin to the left */
+    background-image: url('./images/logos/itch.svg');
+}
+
+.github-r {
+    background-image: url('./images/logos/github.svg');
+}
+
+.slideshow-controls-r {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 15px;
+    width: 80%;
+}
+
+.my-work-entry-image-r {
+    display: none;
+    width: 100%;
+    object-fit: contain;
+    height: 600px;
+    margin: auto;
+}
+
+.my-work-r ul {
+    list-style-type: square;
+    padding: 30px 0 0 25px;
+    margin: 0;
+    /* Added: Text align right */
+    text-align: left;
+}
+
 /* Arrow buttons */
 .prev, .next {
     color: var(--highlight-color);
@@ -424,6 +536,75 @@ hr {
         height: 50px;
     }
 }
+
+/*////// Slide Container //////*/
+.slide-container {
+    width: 100%;
+    margin-bottom: 50px; /* Adjust as needed */
+}
+
+/* Slides */
+.slides {
+    position: relative;
+    height: 400px; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+    .slide.active 1 {
+        opacity: 1;
+    }
+
+/* Slide Image */
+.slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Slide Text */
+.slide-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+}
+
+/* Slide Controls */
+.slide-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+    .slide-controls button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.3s;
+    }
+
+        .slide-controls button:hover {
+            opacity: 1;
+        }
 
 /*//// Contact Me ////*/
 
