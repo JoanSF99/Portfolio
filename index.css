@@ -169,16 +169,6 @@ hr {
         font-size: var(--about-me-p-size);
     }
 
-.ghost-animation {
-    position: absolute;
-    display: block;
-    background-image: url("./images/ghost-animation.gif");
-    margin-left: 15vw;
-    bottom: 15%;
-    width: 100px;
-    height: 100px;
-}
-
 .about-me-line {
     position: absolute;
     bottom: 0;
@@ -195,10 +185,6 @@ hr {
     .about-me {
         transform: translate(-50%, -80%);
         width: 95%;
-    }
-
-    .ghost-animation {
-        margin-left: 0vw;
     }
 }
 
@@ -221,10 +207,6 @@ hr {
         .about-me p {
             width: 95%;
         }
-
-    .ghost-animation {
-        display: none;
-    }
 }
 
 /*///// Fireflies /////*/
@@ -302,7 +284,7 @@ hr {
 .my-work-entry-slideshow {
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: rgba(8, 30, 38, 0.5);
     width: 70%;
     min-height: 700px;
     height: 100%;
@@ -356,106 +338,6 @@ hr {
     list-style-type: square;
     padding: 30px 0 0 25px;
     margin: 0;
-}
-
-/* ////// My Work (Right Side) ////// */
-.my-work-r {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 60%;
-    /* Added: Align items to the right */
-    justify-content: flex-end;
-}
-
-.my-work-spacer-r {
-    height: 150px;
-}
-
-.my-work-r h1 {
-    color: var(--highlight-color);
-    /* Added: Text align right */
-    text-align: left;
-}
-
-.my-work-entry-r {
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-.my-work-entry-text-r {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-size: var(--about-me-p-size);
-    line-height: normal;
-    width: 30%;
-    margin-left: 3%; /* Changed: Margin to the left */
-    /* Added: Text align right */
-    text-align: left;
-}
-
-.my-work-entry-slideshow-r {
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-    width: 70%;
-    min-height: 700px;
-    height: 100%;
-}
-
-.link-list-r {
-    height: 55px;
-    display: flex;
-    flex-direction: row;
-    /* Added: Justify content to the right */
-    justify-content: flex-end;
-}
-
-.image-button-r {
-    background-repeat: no-repeat;
-    background-size: contain; /* Scale the image while maintaining aspect ratio */
-    background-position: center; /* Center the image within the div */
-    width: 10%; /* Ensure the width fills the container */
-    height: 100%; /* Make the background size adjust to the div's height */
-    transition: all 0.2s;
-}
-
-    .image-button:hover-r {
-        transform: scale(1.2); /* Swell the image slightly */
-    }
-
-.itch-r {
-    margin-right: auto; /* Changed: Margin to the left */
-    background-image: url('./images/logos/itch.svg');
-}
-
-.github-r {
-    background-image: url('./images/logos/github.svg');
-}
-
-.slideshow-controls-r {
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    margin-bottom: 15px;
-    width: 80%;
-}
-
-.my-work-entry-image-r {
-    display: none;
-    width: 100%;
-    object-fit: contain;
-    height: 600px;
-    margin: auto;
-}
-
-.my-work-r ul {
-    list-style-type: square;
-    padding: 30px 0 0 25px;
-    margin: 0;
-    /* Added: Text align right */
-    text-align: left;
 }
 
 /* Arrow buttons */
