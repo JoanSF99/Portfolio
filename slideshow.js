@@ -35,3 +35,4 @@ initSlides('slideshow1');
 initSlides('slideshow2');
 initSlides('slideshow3');
 initSlides('slideshow4');// JavaScript source code
+initSlides('slideshow5');
