@@ -536,3 +536,14 @@ footer {
         padding-top: 100px;
     }
 }
+
+@media (pointer: coarse) {
+    .cursor-dot,
+    .cursor-outline {
+        display: none;
+    }
+    
+    body {
+        cursor: auto;
+    }
+}
