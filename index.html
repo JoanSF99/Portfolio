@@ -1,276 +1,248 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="index.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
-
 <head>
-    <title>Joan Sánchez</title>
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-    <meta name="title" content="Joan Sánchez" />
-    <meta name="description" content="A gameplay programmer." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://github.com/JoanSF99/Portfolio" />
-    <meta property="og:title" content="Joan Sánchez" />
-    <meta property="og:description" content="A gameplay programmer." />
-    <meta property="og:image" content="https://github.com/JoanSF99/Portfolio/blob/main/images/link-preview.png" />
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://invadingdingo.github.io/portfolio/" />
-    <meta property="twitter:title" content="Joan Sánchez" />
-    <meta property="twitter:description" content="A gameplay programmer." />
-    <meta property="twitter:image" content="https://github.com/JoanSF99/Portfolio/blob/main/images/link-preview.png" />
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joan Sánchez - Gameplay Programmer</title>
+    <meta name="description" content="Portfolio of Joan Sánchez, Gameplay Programmer and Level Designer.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <!-- Background Canvas for Particles -->
+    <canvas id="bg-canvas"></canvas>
 
-    <!-- Nav Bar -->
-    <div class="navbar">
-        <!-- Name on navbar -->
-        <div class="navbar-name">
-            <h1>Joan Sánchez //</h1>
-            <h2>  Gameplay programmer.</h2>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="brand">J.SÁNCHEZ <span class="brand-accent">//</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#other">Other Projects</a></li>
+                <li><a href="#contact" class="btn-nav">Contact</a></li>
+            </ul>
         </div>
+    </nav>
 
-        <!-- Links on navbar -->
-        <!--
-        <div class="navbar-links">
-            <nav>
-                <a href="/html/">HTML</a> |
-                <a href="/css/">CSS</a> |
-                <a href="/js/">JavaScript</a> |
-                <a href="/python/">Python</a>
-            </nav>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container hero-content reveal">
+                <p class="subtitle">Hello! My name is</p>
+                <h1 class="title glitch" data-text="Joan Sánchez">Joan Sánchez</h1>
+                <h2 class="role">GAMEPLAY PROGRAMMER <span class="divider">/</span> LEVEL DESIGNER</h2>
+                <p class="hero-desc">Embarking on a journey in Game Development, crafting immersive interactive experiences through code and design.</p>
+                <div class="hero-cta">
+                    <a href="#work" class="btn-primary">View My Work</a>
+                    <a href="https://drive.google.com/file/d/1a_exGO8GUta1yZ6bqEtB_Ugi6eq47GLm/view?usp=sharing" target="_blank" class="btn-secondary">Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container reveal">
+                <h2 class="section-title">01. <span class="accent">About Me</span></h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I have a degree in <strong>Design and Development of Video Games</strong> at the Universitat Jaume I. I love solving complex technical challenges to bring creative ideas to life.</p>
+                        <p>My skill set includes proficiency in industry-leading game engines and a strong foundation in modern web technologies.</p>
+                        
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h3>Engines</h3>
+                                <div class="tags">
+                                    <span class="tag">Unreal Engine</span>
+                                    <span class="tag">Unity</span>
+                                    <span class="tag">Godot</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h3>Programming</h3>
+                                <div class="tags">
+                                    <span class="tag">C#</span>
+                                    <span class="tag">C++</span>
+                                    <span class="tag">Blueprints</span>
+                                    <span class="tag">HTML/CSS</span>
+                                    <span class="tag">JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Work Section -->
+        <section id="work" class="work">
+            <div class="container reveal">
+                <h2 class="section-title">02. <span class="accent">Featured Work</span></h2>
+                
+                <div class="project-grid">
+                    <!-- Project 1 -->
+                    <a href="https://joansf.itch.io/soe" target="_blank" class="project-card" style="display: block; text-decoration: none; color: inherit;">
+                        <div class="project-img-container">
+                            <img src="assets/stride_of_eternity.png" alt="Stride of Eternity">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <span class="project-type">Featured Project</span>
+                                <h3>Stride of Eternity</h3>
+                            </div>
+                            <div class="project-desc">
+                                <p>An AI-driven project featuring advanced machine learning agents and dynamically generated environments.</p>
+                            </div>
+                            <div class="project-tech">
+                                <span>Unity</span>
+                                <span>ML-Agents</span>
+                                <span>Procedural terrain</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Project 2 -->
+                    <a href="https://joansf.itch.io/watch-out" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">
+                        <div class="project-img-container">
+                            <img src="assets/watch_out.png" alt="Watch Out">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <span class="project-type">Game Jam</span>
+                                <h3>Watch Out</h3>
+                            </div>
+                            <div class="project-desc">
+                                <p>A fast-paced jam game developed using C#, focusing on tight mechanics and quick reflex gameplay.</p>
+                            </div>
+                            <div class="project-tech">
+                                <span>Unity</span>
+                                <span>C#</span>
+                                <span>Game Jam</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Project 3 -->
+                    <a href="https://joansf.itch.io/4trouble" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">
+                        <div class="project-img-container">
+                            <img src="assets/four_trouble.png" alt="4Trouble">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <span class="project-type">Game Jam</span>
+                                <h3>4Trouble</h3>
+                            </div>
+                            <div class="project-desc">
+                                <p>A collaborative project created entirely with Unreal Engine Blueprints during a high-stakes Game Jam.</p>
+                            </div>
+                            <div class="project-tech">
+                                <span>Unreal</span>
+                                <span>Blueprints</span>
+                                <span>Game Jam</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Project 4 -->
+                    <a href="https://joansf.itch.io/llim" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">
+                        <div class="project-img-container">
+                            <img src="assets/llim.png" alt="Llim">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <span class="project-type">Serious Game</span>
+                                <h3>Llim</h3>
+                            </div>
+                            <div class="project-desc">
+                                <p>A purposeful "Serious Game" exploring meaningful narratives and mechanics built in Unity with C#.</p>
+                            </div>
+                            <div class="project-tech">
+                                <span>Unity</span>
+                                <span>C#</span>
+                                <span>Serious Game</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Projects Section -->
+        <section id="other" class="other-projects">
+            <div class="container reveal">
+                <h2 class="section-title">03. <span class="accent">Other Experiments</span></h2>
+                <div class="other-grid">
+                    <a href="https://joansf.itch.io/endless-runner" target="_blank" class="other-card">
+                        <div class="other-img-container">
+                            <img src="assets/infinite_runner.png" alt="Infinite Runner">
+                        </div>
+                        <div class="other-card-content">
+                            <h4>Infinite Runner</h4>
+                            <p>Endless survival mechanics.</p>
+                            <span class="link-text">Play on itch.io ↗</span>
+                        </div>
+                    </a>
+                    <a href="https://joansf.itch.io/lliurar-el-bosc" target="_blank" class="other-card">
+                        <div class="other-img-container">
+                            <img src="assets/lliurar_el_bosc.png" alt="Lliurar el Bosc">
+                        </div>
+                        <div class="other-card-content">
+                            <h4>Lliurar el Bosc</h4>
+                            <p>Atmospheric exploration.</p>
+                            <span class="link-text">Play on itch.io ↗</span>
+                        </div>
+                    </a>
+                    <a href="https://joansf.itch.io/fearharvester" target="_blank" class="other-card">
+                        <div class="other-img-container">
+                            <img src="assets/fear_harvester.png" alt="Fear Harvester">
+                        </div>
+                        <div class="other-card-content">
+                            <h4>Fear Harvester</h4>
+                            <p>Horror survival experience.</p>
+                            <span class="link-text">Play on itch.io ↗</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container reveal">
+                <h2 class="section-title">04. <span class="accent">What's Next?</span></h2>
+                <h1 class="contact-title">Get In Touch</h1>
+                <p class="contact-desc">I am currently open to new opportunities in game development. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                <div class="contact-actions">
+                    <a href="mailto:joansanchezfrancisco99@gmail.com" class="btn-primary btn-large">Say Hello</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/joansf99" target="_blank" title="GitHub" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/joan-s%C3%A1nchez-francisco/" target="_blank" title="LinkedIn" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+                <a href="https://joansf.itch.io/" target="_blank" title="itch.io" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><line x1="15" y1="13" x2="15.01" y2="13"></line><line x1="18" y1="11" x2="18.01" y2="11"></line><rect x="2" y="6" width="20" height="12" rx="2"></rect></svg>
+                </a>
+            </div>
+            <p>Designed & Built for Joan Sánchez</p>
         </div>
-        -->
-    </div>
+    </footer>
 
-    <!-- About Me -->
-    <div class="about-me-container">
-        <div class="about-me">
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
 
-            <h1>Joan Sánchez</h1>
-            <h2>GAMEPLAY PROGRAMMER / LEVEL DESIGNER</h2>
-            <p>
-                Hello! My name is Joan and I am embarking on a journey in Game Development.
-                I have a degree in Design and Development of Video Games at the Universitat Jaume I.
-                My skill set includes proficiency in game engines like Unreal Engine, Unity and Godot. In addition, I have some experience in web design with languages such as HTML and JavaScript.
-            </p>
-        </div>
-
-        <div class="fireflies"></div>
-
-
-
-    </div>
-    <script src="fireflies.js"></script>
-
-    <!-- My Work -->
-    <div class="my-work">
-        <h3>MY WORK</h3>
-
-        <!-- Stride of Eternity -->
-        <div class="my-work-entry">
-            <div class="my-work-entry-text">
-                <h1>Stride of Eternity</h1>
-                Stride of Eternity is an infinite runner game focused on procedural terrain generation and an AI-driven enemy that learns from the player.
-                I decided to use Unity to develop this project and to create the adaptive AI I used ML-Agents, an open source toolkit.
-                <ul>
-                    <li>Unity</li>
-                    <li>ML-Agents</li>
-                    <li>Procedural terrain</li>
-                </ul>
-
-                <div class="link-list">
-                    <a href="https://joansf.itch.io/soe" title="play game" target="_blank" class="image-button itch"></a>
-                </div>
-            </div>
-            <div class="my-work-entry-slideshow" id="slideshow1">
-
-                <img class="my-work-entry-image" src="./images/SOE/Tittle.png">
-                <img class="my-work-entry-image" src="./images/SOE/Main.png">
-                <img class="my-work-entry-image" src="./images/SOE/Game.png">
-
-                <div class="slideshow-controls">
-                    <a class="prev" onclick="changeSlide(-1, 'slideshow1')">&#10094;</a>
-                    <a class="next" onclick="changeSlide(1, 'slideshow1')">&#10095;</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="my-work-spacer"></div>
-
-        <!-- Watch Out -->
-        <div class="my-work-entry">
-            <div class="my-work-entry-text">
-                <h1>Watch Out</h1>
-                2D Game maked alone for a 48h Game Jam
-
-                Thematic of the Game Jam: EVERYTHING IS A WEAPON
-
-                Skill laberinth game
-
-                <ul>
-                    <li>Unity</li>
-                    <li>C#</li>
-                    <li>Game Jam</li>
-                </ul>
-
-                <div class="link-list">
-                    <a href="https://joansf.itch.io/watch-out" title="play game" target="_blank" class="image-button itch"></a>
-                </div>
-            </div>
-            <div class="my-work-entry-slideshow" id="slideshow2">
-
-                <img class="my-work-entry-image" src="./images/WO/Logo.png">
-                <img class="my-work-entry-image" src="./images/WO/Menu.png">
-                <img class="my-work-entry-image" src="./images/WO/Game1.png">
-                <img class="my-work-entry-image" src="./images/WO/Game2.png">
-
-                <div class="slideshow-controls">
-                    <a class="prev" onclick="changeSlide(-1, 'slideshow2')">&#10094;</a>
-                    <a class="next" onclick="changeSlide(1, 'slideshow2')">&#10095;</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="my-work-spacer"></div>
-
-        <!-- 4Trouble  -->
-        <div class="my-work-entry">
-            <div class="my-work-entry-text">
-                <h1>4Trouble</h1>
-                This game is made for the Level Up Game Dev Hub Game Jam 2024.
-                Game centered around the theme of "Collective Intelligence vs. Collective Madness".
-                Using Unreal Engine and Blueprints, we created a game where players control four characters with unique abilities, navigating through challenging mazes.
-                <ul>
-                    <li>Unreal</li>
-                    <li>Blueprints</li>
-                    <li>Game Jam</li>
-                </ul>
-
-                <div class="link-list">
-                    <a href="https://joansf.itch.io/4trouble" title="play game" target="_blank" class="image-button itch"></a>
-                </div>
-            </div>
-            <div class="my-work-entry-slideshow" id="slideshow3">
-
-                <img class="my-work-entry-image" src="./images/4T/Logo.png">
-                <img class="my-work-entry-image" src="./images/4T/Main.png">
-                <img class="my-work-entry-image" src="./images/4T/Game.png">
-
-                <div class="slideshow-controls">
-                    <a class="prev" onclick="changeSlide(-1, 'slideshow3')">&#10094;</a>
-                    <a class="next" onclick="changeSlide(1, 'slideshow3')">&#10095;</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="my-work-spacer"></div>
-
-        <!-- Llim  -->
-        <div class="my-work-entry">
-            <div class="my-work-entry-text">
-                <h1>Llim</h1>
-                Llim is a serious game about the depopulation of rural areas. This game was made with Unity, a graphic adventure with minigames.
-                <ul>
-                    <li>Unity</li>
-                    <li>C#</li>
-                    <li>Serious Game</li>
-                </ul>
-
-                <div class="link-list">
-                    <a href="https://joansf.itch.io/llim" title="play game" target="_blank" class="image-button itch"></a>
-                </div>
-            </div>
-            <div class="my-work-entry-slideshow" id="slideshow4">
-
-                <img class="my-work-entry-image" src="./images/Llim/Main.png">
-                <img class="my-work-entry-image" src="./images/Llim/Menu.png">
-                <img class="my-work-entry-image" src="./images/Llim/Game1.png">
-                <img class="my-work-entry-image" src="./images/Llim/Game2.png">
-                <img class="my-work-entry-image" src="./images/Llim/Game3.png">
-                <img class="my-work-entry-image" src="./images/Llim/Game4.png">
-
-                <div class="slideshow-controls">
-                    <a class="prev" onclick="changeSlide(-1, 'slideshow4')">&#10094;</a>
-                    <a class="next" onclick="changeSlide(1, 'slideshow4')">&#10095;</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="my-work-spacer"></div>
-
-        <!-- Other  -->
-        <div class="my-work-entry">
-            <div class="my-work-entry-text">
-                <h1>Other</h1>
-                List of other projects I have been working on.
-                <ul>
-                    <li><a href="https://joansf.itch.io/endless-runner" target="_blank">Infinite Runner</a></li>
-                    <li><a href="https://joansf.itch.io/lliurar-el-bosc" target="_blank">Lliurar el Bosc</a></li>
-                    <li><a href="https://joansf.itch.io/fearharvester" target="_blank">Fear Harvester</a></li>
-                </ul>
-
-                <div class="link-list">
-                    <a href="https://joansf.itch.io" title="play game" target="_blank" class="image-button itch"></a>
-                </div>
-            </div>
-            <div class="my-work-entry-slideshow" id="slideshow5">
-
-                <img class="my-work-entry-image" src="./images/Other/Logo_IR.png">
-                <img class="my-work-entry-image" src="./images/Other/Game_IR.png">
-                <img class="my-work-entry-image" src="./images/Other/Logo_LB.png">
-                <img class="my-work-entry-image" src="./images/Other/Game_LB.png">
-                <img class="my-work-entry-image" src="./images/Other/Logo_FH.png">
-                <img class="my-work-entry-image" src="./images/Other/Game_FH.png">
-
-                <div class="slideshow-controls">
-                    <a class="prev" onclick="changeSlide(-1, 'slideshow5')">&#10094;</a>
-                    <a class="next" onclick="changeSlide(1, 'slideshow5')">&#10095;</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="my-work-spacer"></div>
-
-        <script src="slideshow.js"></script>
-    </div>
-
-
-
-    <!-- Divider -->
-    <hr>
-
-    <!-- Contact -->
-    <div class="contact-container">
-        <h3>CONTACT ME</h3>
-        <div class="contact">
-            <img class="contact-image" src="./images/about_me.jpg">
-            <div class="contact-text">
-                If you like what you've seen, feel free to check out my resume, which is linked below. If you have questions, I've provided my LinkedIn and Email. Both of these work great for getting in touch with me!
-                <br>
-                <br>
-                <div class="contact-buttons">
-                    <a href="mailto:joansanchezfrancisco99@gmail.com" class="contact-email" target="_blank">joansanchezfrancisco99@gmail.com</a>
-                    <a href="https://drive.google.com/file/d/1a_exGO8GUta1yZ6bqEtB_Ugi6eq47GLm/view?usp=sharing" class="contact-resume" target="_blank">Resume</a>
-                </div>
-            </div>
-
-        </div>
-
-
-    </div>
-
+    <script src="main.js"></script>
 </body>
-
-<footer>
-    <div class="footer-links">
-        <a href="https://www.linkedin.com/in/joan-sánchez-francisco/" class="footer-link footer-linkedin" target="_blank"></a>
-        <a href="https://github.com/JoanSF99" class="footer-link footer-github" target="_blank"></a>
-        <a href="https://joansf.itch.io" class="footer-link footer-itchio" target="_blank"></a>
-    </div>
-</footer>
-
 </html>
